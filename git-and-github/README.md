@@ -1,4 +1,4 @@
-# 📑 Masterizando Git & GitHub
+### 📑 Masterizando Git & GitHub
 
 Este repositório foi criado para centralizar meus estudos, anotações e exercícios práticos sobre controle de versão com **Git** e colaboração via **GitHub**. O objetivo é documentar minha evolução, desde os comandos básicos até fluxos de trabalho mais avançados.
 

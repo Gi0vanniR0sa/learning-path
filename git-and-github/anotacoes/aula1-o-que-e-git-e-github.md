@@ -3,7 +3,7 @@
 <BR>
 
 <center>
-    <img src="../imagens/git-logo.png" alt="" width="300" height="300">
+    <img src="../anotacoes-imagens/git-logo.png" alt="" width="300" height="300">
 </center>
 
 O *git* é um software para rastrear alterações em **qualquer conjunto de arquivos**, sendo utilizado principalmente para coordenar o trabalho entre programadores que desenvolvem código-fonte de forma colaborativa durante o desenvolvimento de software. 
@@ -13,7 +13,7 @@ Seu principal objetivo é o monitoramento de arquivos de um projeto.
 ### O que é GitHub?
 
 <center>
-    <img src="../imagens/github-logo-with-background.jpg" alt="" width="400">
+    <img src="../anotacoes-imagens/github-logo-with-background.jpg" alt="" width="400">
 </center>
 
 Enquanto o *git* se apresenta como software de rastreio de arquivos de um projeto, o *github* se mostra como um provedor de hospedagem na Internet para o desenvolvimento de software e controle de versão. É nele que ficam armazenados os arquivos do projeto gerenciados pelo *git*.

@@ -34,7 +34,7 @@ Quando isso não é possível existem três caminhos possíveis para as alteraç
 
 !!! Utilizando o stash
 
-    O *git stash* é utilizado em momentos em que você precisa alterar de branch mas seu diretório ainda não está "limpo", ou seja, ainda existem alterações que não estão no repositório remoto as quais você quer manter.
+    O *git stash* é utilizado em momentos em que você precisa alterar de branch mas seu diretório ainda não está "limpo", ou seja, ainda existem alterações que não estão no repositório local as quais você quer manter.
 
     O comando `git stash` te permite salvar rapidamente alterações recentes ainda não comitadas em uma pilha interna (do próprio git). Dessa forma seu ambiente volta ao estado do último commit e o *git* te permite trocar de branch.  
     
@@ -114,7 +114,7 @@ Código depois do revert:
             return a / b
 ```
 
-Note que a linha com a condição que foi apagada retornando ao seu estado original antes do commit com uma modificação equivocada `e4f5g6h` como se tivessemos pressionado `ctrl + z`. Além disso, outro efeito colateral é a criação de um novo commit na timeline que reverte as alterações daquele selecionado.  
+Note que a linha com o `revert`, a condição que foi apagada retorna ao seu estado original antes do commit com uma modificação equivocada `e4f5g6h` como se tivessemos pressionado `ctrl + z`. Além disso, outro efeito colateral é a criação de um novo commit na timeline que reverte as alterações do commit selecionado.  
 
 ```
 a9b8c7d Revert "Remove validação do divisor"

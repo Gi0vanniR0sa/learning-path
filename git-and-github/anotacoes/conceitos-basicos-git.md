@@ -20,9 +20,9 @@ O rastreio começa quando, dentro da pasta do seu projeto, no terminal você exe
 
 Um **commit** é como se fosse um checkpoint do seu projeto. Ele grava uma *snapshot* do seu projeto, mantendo todos os arquivos e o estado de cada um naquele momento do desenvolvimento. 
 
-Ao realizar um commit é obrigatório anexar uma mensagem, normalmente ela carrega uma descrição das alterações realizadas.
+Ao realizar um commit é obrigatório anexar uma mensagem, normalmente ela carrega uma descrição breve que resume as alterações realizadas.
 
-Com ele é possível resgatar versões anteriores do projeto navegando pelos commits anteriores.
+Com ele é possível resgatar versões anteriores do projeto navegando pelos commits já realizados.
 
 Alguns dos comandos úteis são:
 
@@ -34,6 +34,15 @@ Exibe o histórico de alterações:
 ```
     git log 
 ````
+
+Desde a adição de arquivos alterados ao `stage` (o preparo) até o agrupamento dessas mudanças em um novo `commit`, todas as alterações existem exclusivamente no repositório local. Nesse estágio, os repositórios local e remoto encontram-se desincronizados: o ambiente local possui um histórico mais recente, enquanto o servidor remoto (como GitHub ou GitLab) permanece estático, sem conhecimento das novas implementações. 
+
+Para que o repositório remoto tome conhecimento do estado atual da branchs e das novas modificações realizadas, utilizamos o comando `push`. Ele é responsável por transferir os commits locais para o servidor, aparecendo da seguinte forma: 
+
+Envia os commits locais para o servidor (sincronização):
+```
+git push <branch>
+```
 
 Uma boa prática utilizando commits é realizá-los a cada alteração importante dentro do projeto, construindo assim uma linha do tempo com alterações significativas. 
 
@@ -93,17 +102,17 @@ Algumas das melhores boas práticas utilizando branchs são:
 
 Cria uma nova branch paralela a branch principal `main`:
 ```
-    git branch <nome-da-branch>
+    git branch <branch>
 ````
 
 Apaga uma branch criada anteriormente:
 ```
-    git branch -d <nome-da-branch>
+    git branch -d <branch>
 ````
 
 Navega para outra branch do projeto:
 ```
-    git checkout <nome-da-branch>
+    git checkout <branch>
 ````
 
 Lista as branchs e exibe em qual o usuário está situado:
@@ -123,7 +132,7 @@ Uma vez nela, utiliza-se o comando `git merge <nome-da-branch-secundaria>` para 
 
 Mescla a branch secundária com a branch no qual o usuário se encontra:
 ```
-    git merge <nome-da-branch>
+    git merge <branch>
 ````
 
 Aborta uma tentativa de merge

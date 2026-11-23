@@ -20,9 +20,9 @@ O rastreio começa quando, dentro da pasta do seu projeto, no terminal você exe
 
 Um **commit** é como se fosse um checkpoint do seu projeto. Ele grava uma *snapshot* do seu projeto, mantendo todos os arquivos e o estado de cada um naquele momento do desenvolvimento. 
 
-Ao realizar um commit é obrigatório anexar uma mensagem, normalmente ela carrega uma descrição das alterações realizadas.
+Ao realizar um commit é obrigatório anexar uma mensagem, normalmente ela carrega uma descrição breve que resume as alterações realizadas.
 
-Com ele é possível resgatar versões anteriores do projeto navegando pelos commits anteriores.
+Com ele é possível resgatar versões anteriores do projeto navegando pelos commits já realizados.
 
 Alguns dos comandos úteis são:
 
@@ -35,13 +35,22 @@ Exibe o histórico de alterações:
     git log 
 ````
 
+Desde a adição de arquivos alterados ao `stage` (o preparo) até o agrupamento dessas mudanças em um novo `commit`, todas as alterações existem exclusivamente no repositório local. Nesse estágio, os repositórios local e remoto encontram-se desincronizados: o ambiente local possui um histórico mais recente, enquanto o servidor remoto (como GitHub ou GitLab) permanece estático, sem conhecimento das novas implementações. 
+
+Para que o repositório remoto tome conhecimento do estado atual da branchs e das novas modificações realizadas, utilizamos o comando `push`. Ele é responsável por transferir os commits locais para o servidor, aparecendo da seguinte forma: 
+
+Envia os commits locais para o servidor (sincronização):
+```
+git push <branch>
+```
+
 Uma boa prática utilizando commits é realizá-los a cada alteração importante dentro do projeto, construindo assim uma linha do tempo com alterações significativas. 
 
 Uma timeline com várias modificações mínimas torna o trabalho de navegar entre os commits anteriores para reversão *(rollback)* e revisão de código *(code review)* um processo mais lento e custoso.
 
 ### Estados dos arquivos antes de um commit
 
-- **Modified:** Arquivos que alterados que diferem do último estado que estavam em relação ao ultimo commit aparecem como modificados `modified`.
+- **Modified:** Arquivos alterados que diferem do estado que estavam em relação ao ultimo commit aparecem como modificados `modified`.
 
 - **Staging:** Arquivos que estão prontos e que compõem o próximo commit são listado como preparados `staging`. 
 
@@ -59,7 +68,7 @@ Uma timeline com várias modificações mínimas torna o trabalho de navegar ent
         git rm --cached <arquivo>
     ````
 
-    Remove adiciona todas as novas alterações ao stage:
+    Adiciona todas as novas alterações ao stage:
     ```
         git add . 
     ````
@@ -81,29 +90,29 @@ Dentro do ecosistema do *git*, uma branch aparece como um **espaço de trabalho 
 
 É fundamental para trabalhar em novas funcionalidades ou correções de bugs sem afetar o estado atual do projeto. Mantendo dessa forma sempre um *checkpoint* de uma versão concreta e estável ao alcance a partir de alguns comandos.
 
-Algumas das principais boas práticas utilizando branchs são: 
+Algumas das melhores boas práticas utilizando branchs são: 
 
 - Se utilizar de nomes descritivos e claros no momento de nomear elas (ex: feature/login-page ou bugfix/header-crash).
 
 - Manter cada ramo focado em um único propósito ou característica *(Short-lived Feature Branches)*. 
 
-    Branchs extensas demais podem gerar um acoplamento entre as mudanças tornando difícil a reversão de apenas uma delas em caso de **falha crítica**, além de que torna a timeline do projeto mais confunsa com descrições genéricas e a revisão de código um trabalho mais desgastante,
+    Branchs extensas demais podem gerar um acoplamento entre as mudanças tornando difícil a reversão de apenas uma delas em caso de **falha crítica**, além de tornar a timeline do projeto mais confunsa com descrições genéricas e a revisão de código um trabalho mais desgastante.
 
 #### Comandos úteis:
 
 Cria uma nova branch paralela a branch principal `main`:
 ```
-    git branch <nome-da-branch>
+    git branch <branch>
 ````
 
 Apaga uma branch criada anteriormente:
 ```
-    git branch -d <nome-da-branch>
+    git branch -d <branch>
 ````
 
 Navega para outra branch do projeto:
 ```
-    git checkout <nome-da-branch>
+    git checkout <branch>
 ````
 
 Lista as branchs e exibe em qual o usuário está situado:
@@ -123,7 +132,7 @@ Uma vez nela, utiliza-se o comando `git merge <nome-da-branch-secundaria>` para 
 
 Mescla a branch secundária com a branch no qual o usuário se encontra:
 ```
-    git merge <nome-da-branch>
+    git merge <branch>
 ````
 
 Aborta uma tentativa de merge

@@ -20,6 +20,6 @@ Enquanto o *git* se apresenta como software de rastreio de arquivos de um projet
 
 Essencialmente o *github* é utilizado para hospedar os arquivos monitorados pelo *git*. Contudo, outros usos comuns para ele são: 
 
-- Garantir a segurando dos arquivos em um provedor seguro. 
+- Garantir a segurança dos arquivos em um provedor seguro. 
 - Compartilhar o projeto facilmente com outros desenvolvedores. 
 - Colaboração de outros desenvolvedores com o projeto.

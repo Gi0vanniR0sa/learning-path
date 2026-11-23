@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Homepage</h1> 
+   <!-- Link Absoluto: P/ outro site -->
+   <!-- Cria um link externo. href é a atributo que contem o link para redirecionar 
+    o usuario quando ele pressionar no texto dentro da tag <a> -->
+   <!-- Cada atributo no HTML é composto por um nome e um valor (nome:valor) -->
+   <a href="https://www.theodinproject.com/about">About The Odin Project In Page</a>
+
+   <!-- Quebra de linha -->
+   <br>
+
+   <!-- Cria um link externo. target="_blank" abre o link em outra aba -->
+   <a href="https://www.theodinproject.com/about" target="_blank">About The Odin Project In New Tab</a>
+
+   <br>
+
+   <!-- Link Relativo: P/ uma parte do próprio site -->
+   <!-- Cria um link interno para um arquivo chamado 'about.html' dentro do diretório atual. 
+    Como './' dizemos que o arquivo está no mesmo diretório desse arquivo atual (index.html) -->
+   <a href="./about.html">About In Main Folder</a>
+    
+   <br>
+
+   <!-- Cria um link interno para um arquivo que está no caminho ./pages/about.html levando em 
+    consideração o arquivo index.html atual -->
+   <a href="./pages/about.html">About In Pages Folder</a>
+
+   <br>
+    
+   <!-- Tag de imagem: Elemento vazio, não precisa de tag de fechamento -->
+   <!-- O atributo src informa onde está a imagem que deve ser apresentada. Para isso 
+    utilizamos caminhos absolutos (hospedados) e caminhos relativos (próprios) -->
+   <!-- O atributo alt informa do que se trata a imagem exibida. Útil quando ela não é carregada 
+    e para leitores de tela -->
+   <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo">
+
+   <br> 
+
+   <img src="./images/dog.jpg" alt="Charles in all his glory">
+
+   <br> 
+    
+   <!-- O atributo height e width informa as dimensões da imagem ao navegador e o ajuda a renderizar. Evita 
+    que ele salte sozinho -->
+   <img src="https://www.theodinproject.com/mstile-310x310.png" alt="The Odin Project Logo" height="310" width="310">
+</body>
+</html>
